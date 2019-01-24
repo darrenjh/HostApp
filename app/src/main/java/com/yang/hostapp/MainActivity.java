@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.didi.virtualapk.PluginManager;
 import com.yang.hostapp.databinding.ActivityMainBinding;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             requestPermission();
         }
+        ARouter.getInstance().inject(this);
     }
 
     private void requestPermission() {
@@ -73,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent();
                     intent.setClassName(MainActivity.this, "com.yang.plug1.Plugin1Activity");
                     startActivity(intent);
+                    break;
+                case R.id.btn_start_router:
+                    ARouter.getInstance().build("/test/1").navigation();
                     break;
                 default:
                     break;

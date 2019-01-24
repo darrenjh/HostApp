@@ -25,6 +25,13 @@
             android:layout_marginTop="100dp"
             android:onClick="@{ listener::onClick }"
             android:text="点击启动插件界面" />
+        <Button
+            android:id="@+id/btn_start_router"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{ listener::onClick }"
+            android:text="路由到module界面" />
 
     </LinearLayout>
 </layout>

@@ -1,4 +1,4 @@
-package com.yang.hostapp;
+package com.yang.mylibrary;
 
 import org.junit.Test;
 
